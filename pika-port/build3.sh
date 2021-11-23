@@ -30,7 +30,7 @@ sudo yum install -y libstdc++-static
 git submodule update --init --recursive --force
 
 # compile pika-port for pika 3.0.x
-cd pika_port_3
+cd pika-port/pika_port_3
 make
 export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=/usr/lib64:${LD_LIBRARY_PATH}
