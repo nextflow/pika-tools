@@ -32,6 +32,3 @@ git submodule update --init --recursive --force
 # compile pika-port for pika 3.0.x
 cd pika-port/pika_port_3
 make
-export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
-export LD_LIBRARY_PATH=/usr/lib64:${LD_LIBRARY_PATH}
-./pika_port
