@@ -41,4 +41,4 @@ RUN set -eux; yum install -y epel-release; \
 
 WORKDIR ${PIKA_TOOLS}
 COPY --from=builder $PIKA_TOOLS ./
-CMD ["/bin/bash"]
+CMD ["pika_port"]
