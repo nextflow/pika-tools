@@ -24,7 +24,7 @@ RUN rpm -ivh https://mirrors.aliyun.com/epel/epel-release-latest-7.noarch.rpm &&
     yum -y install git && \
     yum -y install sudo && \
     sh ${PIKA_BUILD_DIR}/pika-port/build3.sh && \
-    cp ${PIKA_BUILD_DIR}/pika-port/pika_port_3/pika_port ${PIKA_TOOLS} && \
+    mkdir ${PIKA_TOOLS} && cp ${PIKA_BUILD_DIR}/pika-port/pika_port_3/pika_port ${PIKA_TOOLS} && \
     yum -y remove gcc-c++ && \
     yum -y remove make && \
     yum -y remove which && \
@@ -41,4 +41,4 @@ RUN set -eux; yum install -y epel-release; \
 
 WORKDIR ${PIKA_TOOLS}
 COPY --from=builder $PIKA_TOOLS ./
-CMD ["/bin/bash"]
+CMD ["pika-port"]
