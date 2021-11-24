@@ -7,7 +7,7 @@ ENV PATH ${PIKA_TOOLS}:${PATH}
 COPY . ${PIKA_BUILD_DIR}
 WORKDIR ${PIKA_BUILD_DIR}
 
-RUN yum -y epel-release && \
+RUN rpm -ivh https://download.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum clean all && \
     yum -y makecache && \
     yum -y install snappy-devel && \
